@@ -41,18 +41,11 @@
 	"ResourceModules": {
 		"skins.bluelib": {
 			"class": "ResourceLoaderSkinModule",
-			"features": {
-				"normalize": true,
-				"elements": true,
-				"content": true,
-				"content-parser-output": true,
-				"interface": true,
-				"interface-category": true,
-				"logo": true
-			},
+			"features": {},
 			"styles": {
 				"resources/bluelib/src/targets/skeleton.root.css": {},
-				"resources/bluelib/src/targets/royalblue.root.css": {}
+				"resources/bluelib/src/targets/royalblue.root.css": {},
+				"resources/tweaks.less": {}
 			}
 		},
 		"skins.bluelib.js": {
