@@ -1,23 +1,33 @@
+// Remove the ugly default margin
 body {
     margin: 0;
 }
 
-form[id^="mw"], #editform {
+// Restore the default display on MediaWiki forms
+form[id^="mw"], #page-content form, #editform {
     display: block;
 }
 
-.printfooter {
-    font-size: xx-small;
-    opacity: 0.5;
+// Use a monospace font in the edit textarea
+#wpTextbox1 {
+    font-family: var(--bluelib-code-family) !important;
+    font-weight: var(--bluelib-code-weight) !important;
+    font-style: normal;
 }
 
-.actions {
+// Hide the print footer
+.printfooter {
+    display: none;
+}
+
+// Display the page actions in a nice flexbox
+.flexlet {
     display: flex;
     margin: 0;
     padding: 0;
     flex-direction: row;
 
-    .actions-side {
+    .flexlet-side {
         display: flex;
         margin: 0;
         padding: 0;
@@ -25,11 +35,11 @@ form[id^="mw"], #editform {
         gap: 8px;
     }
 
-    .actions-left {
+    .flexlet-left {
         margin-right: auto;
     }
 
-    .actions-right {
+    .flexlet-right {
         margin-left: auto;
     }
 
@@ -38,3 +48,182 @@ form[id^="mw"], #editform {
         margin: 0;
     }
 }
+
+// Display non-existing pages in the "broken link" color
+.new {
+    color: ~"rgb(var(--bluelib-broken-r), var(--bluelib-broken-g), var(--bluelib-broken-b))" !important;
+    text-decoration-style: dotted !important;
+
+    * {
+        color: ~"rgb(var(--bluelib-broken-r), var(--bluelib-broken-g), var(--bluelib-broken-b))" !important;
+    }
+}
+
+// Display the autocomments (→ Title name) in the default color
+.autocomment {
+    color: ~"rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7)" !important;
+
+    * {
+        color: ~"rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7)" !important;
+    }
+}
+
+// Highlight selected items in cyan
+#pagehistory .selected {
+    --bluelib-color-r: var(--bluelib-cyan-r);
+    --bluelib-color-g: var(--bluelib-cyan-g);
+    --bluelib-color-b: var(--bluelib-cyan-b);
+
+    outline: none !important;
+    background-color: ~"rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125)" !important;
+}
+
+// The category section
+.catlinks {
+    // Imitate a panel
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 4px;
+    width: 100%;
+    min-width: 312px;
+    background-color: ~"rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.030)";
+
+    font-size: small;
+
+    // Hide the panel completely if there are no categories
+    &:empty {
+        display: none;
+    }
+
+    b {
+        font-weight: 600;
+    }
+
+    // Display links in a single line
+    .mw-normal-catlinks {
+        display: flex;
+        flex-direction: row;
+
+        a[title="Special:Categories"] {
+            font-weight: 600;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            margin: 0 8px;
+            gap: 6px;
+
+            li {
+                display: block;
+                margin: 0;
+            }
+        }
+    }
+}
+
+#namespaces {
+    font-size: small;
+}
+
+// Add a margin to the edit options
+.editOptions {
+    margin-top: 12px;
+}
+
+// Page contents
+.mw-parser-output {
+    // Align titles to the left
+    h1, h2, h3, h4, h5, h6 {
+        text-align: left;
+    }
+
+    // Make the [edit] tags much smaller
+    .mw-editsection {
+        font-size: x-small;
+        margin-left: 4px;
+    }
+}
+
+// Highlight the current search page tab
+.search-types .current a {
+    color: ~"rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b))";
+    font-weight: 600;
+}
+
+
+.diff {
+
+    del, ins {
+        color: ~"rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b))" !important;
+        background-color: ~"rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.030)" !important;
+    }
+
+    .diff-deletedline {
+        --bluelib-color-r: var(--bluelib-red-r);
+        --bluelib-color-g: var(--bluelib-red-g);
+        --bluelib-color-b: var(--bluelib-red-b);
+    }
+
+    .diff-addedline {
+        --bluelib-color-r: var(--bluelib-lime-r);
+        --bluelib-color-g: var(--bluelib-lime-g);
+        --bluelib-color-b: var(--bluelib-lime-b);
+    }
+
+    .diff-context {
+        color: ~"rgb(var(--bluelib-blue-r), var(--bluelib-blue-g), var(--bluelib-blue-b))" !important;
+        background-color: transparent !important;
+    }
+}
+
+.diff-deletedline, .diff-deletedline .diffchange, td[data-marker="−"]::before {
+}
+
+.diff-addedline, .diff-addedline .diffchange, td[data-marker="+"]::before {
+}
+
+.diff-context {
+}
+
+// This is getting hacky
+
+
+// Restore the default bluelib colors in some plugins
+#mw-searchoptions, .mw-search-profile-tabs {
+    background-color: ~"rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.030)";
+}
+
+.oo-ui-layout, .oo-ui-widget, .oo-ui-dropdownWidget-handle {
+    border-color: ~"rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125)" !important;
+}
+
+.oo-ui-widget {
+    background-color: transparent !important;
+}
+
+.mw-prefs-buttons, .oo-ui-buttonElement-button, .thumbborder {
+    border-color: ~"rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125)" !important;
+}
+
+.oo-ui-dropdownInputWidget, .oo-ui-dropdownWidget-handle, .mw-prefs-buttons, .oo-ui-menuOptionWidget {
+    background-color: ~"rgb(var(--bluelib-background-r), var(--bluelib-background-g), var(--bluelib-background-b))" !important;
+}
+
+.oo-ui-labelElement-label, .oo-ui-buttonElement-button, .thumbcaption {
+    color: ~"rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b))" !important;
+}
+
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button, .thumbinner {
+    background-color: ~"rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.030)" !important;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-disabled > .oo-ui-buttonElement-button {
+    background-color: ~"rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.030)" !important;
+    opacity: 0.3 !important;
+}
+
+.mw-rcfilters-ui-filterTagMultiselectWidget.oo-ui-widget-enabled .oo-ui-tagMultiselectWidget-handle, .oo-ui-radioInputWidget, .mw-changeslist-legend {
+    background-color: ~"rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.030)" !important;
+}
+

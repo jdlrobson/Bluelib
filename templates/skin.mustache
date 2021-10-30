@@ -23,13 +23,20 @@
                     </form>
                 {{/data-search-box}}
             </section>
+
             <section class="panel panel-box">
+                <h3>
+                    Links
+                </h3>
+
                 {{#data-portlets-sidebar}}
                     {{#data-portlets-first}}
                         {{>Portlet}}
                     {{/data-portlets-first}}
                 {{/data-portlets-sidebar}}
+
                 <hr class="separator-light"/>
+
                 {{#data-portlets-sidebar}}
                     {{#array-portlets-rest}}
                         {{>Portlet}}
@@ -40,14 +47,14 @@
 
         <main class="main layout-threecol-center">
             <section class="panel panel-box" id="page-actions">
-                <div class="actions">
+                <div class="flexlet">
                     {{#data-portlets}}
-                        <ul class="actions-side actions-left">
+                        <ul class="flexlet-side flexlet-left">
                             {{#data-views}}
                                 {{{html-items}}}
                             {{/data-views}}
                         </ul>
-                        <ul class="actions-side actions-right">
+                        <ul class="flexlet-side flexlet-right">
                             {{#data-actions}}
                                 {{{html-items}}}
                             {{/data-actions}}
@@ -65,12 +72,22 @@
                 <section id="page-content">
                     {{{html-body-content}}}
                 </section>
-                <section class="panel" id="page-categories">
-                    {{{html-categories}}}
-                </section>
-                <section class="panel" id="page-after-content">
-                    {{{html-after-content}}}
-                </section>
+                {{{html-categories}}}
+
+                {{#data-portlets}}
+                    {{#data-namespaces}}
+                        <div id="namespaces" class="panel">
+                            <div class="flexlet">
+                                <ul class="flexlet-side flexlet-left">
+                                    <b>Namespaces:</b>
+                                    {{{html-items}}}
+                                </ul>
+                            </div>
+                        </div>
+                    {{/data-namespaces}}
+                {{/data-portlets}}
+
+                {{{html-after-content}}}
             </section>
         </main>
 
@@ -129,17 +146,6 @@
                         {{>Portlet}}
                     </section>
                 {{/data-notifications}}
-            {{/data-portlets}}
-
-            {{#data-portlets}}
-                {{#data-namespaces}}
-                    <section class="panel panel-box">
-                        <h3>
-                            Namespaces
-                        </h3>
-                        {{>Portlet}}
-                    </section>
-                {{/data-namespaces}}
             {{/data-portlets}}
 
             {{#data-portlets}}
