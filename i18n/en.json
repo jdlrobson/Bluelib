@@ -1,7 +1,7 @@
 {
 	"@metadata": {
-		"authors": [ "..." ]
+		"authors": [ "Stefano Pigozzi <me@steffo.eu>" ]
 	},
-	"skinname-example": "Example",
-	"example-desc": "An example skin showcasing the best practices"
+	"skinname-example": "Bluelib",
+	"example-desc": "A MediaWiki skin using Bluelib"
 }

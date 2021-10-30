@@ -1,11 +1,11 @@
 {
-	"name": "Example",
+	"name": "Bluelib",
 	"version": "1.0",
 	"author": "...",
-	"url": "https://www.mediawiki.org/wiki/Skin:Example",
-	"descriptionmsg": "example-desc",
-	"namemsg": "skinname-example",
-	"license-name": "CC0-1.0",
+	"url": "https://www.mediawiki.org/wiki/Skin:Bluelib",
+	"descriptionmsg": "bluelib-desc",
+	"namemsg": "skinname-bluelib",
+	"license-name": "AGPL-3.0-or-later",
 	"type": "skin",
 	"requires": {
 		"MediaWiki": ">= 1.36.0"
@@ -14,10 +14,12 @@
 		"example": {
 			"class": "SkinMustache",
 			"args": [ {
-				"name": "example",
+				"name": "bluelib",
+				"templateDirectory": "skins/Bluelib/templates/",
+				"template": "skin",
 				"responsive": true,
 				"styles": [
-					"skins.example"
+					"skins.bluelib"
 				],
 				"messages": [
 					"sitetitle",
@@ -26,18 +28,18 @@
 					"navigation-heading"
 				],
 				"scripts": [
-					"skins.example.js"
+					"skins.bluelib.js"
 				]
 			} ]
 		}
 	},
 	"MessagesDirs": {
-		"Example": [
+		"Bluelib": [
 			"i18n"
 		]
 	},
 	"ResourceModules": {
-		"skins.example": {
+		"skins.bluelib": {
 			"class": "ResourceLoaderSkinModule",
 			"features": {
 				"normalize": true,
@@ -49,34 +51,18 @@
 				"logo": true
 			},
 			"styles": {
-				"resources/screen-common.less": {
-					"media": "screen"
-				},
-				"resources/screen-desktop.less": {
-					"media": "screen and (min-width: 751px)"
-				},
-				"resources/screen-mobile.less": {
-					"media": "screen and (max-width: 750px)"
-				},
-				"resources/print.css": {
-					"media": "print"
-				}
+				"resources/bluelib/src/targets/skeleton.root.css": {},
+				"resources/bluelib/src/targets/royalblue.root.css": {}
 			}
 		},
-		"skins.example.js": {
-			"scripts": [
-				"resources/main.js"
-			]
+		"skins.bluelib.js": {
+			"scripts": []
 		}
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteSkinPath": "Example"
+		"remoteSkinPath": "Bluelib"
 	},
-	"ResourceModuleSkinStyles": {
-		"example": {
-			"+ext.echo.styles.badge": "resources/extensions/echo.styles.badge.less"
-		}
-	},
+	"ResourceModuleSkinStyles": {},
 	"manifest_version": 1
 }
