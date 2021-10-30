@@ -11,24 +11,83 @@
 		"MediaWiki": ">= 1.36.0"
 	},
 	"ValidSkinNames": {
-		"example": {
+		"bluelib-paper": {
 			"class": "SkinMustache",
 			"args": [ {
-				"name": "bluelib",
+				"name": "Bluelib (Sheet of Paper)",
 				"templateDirectory": "skins/Bluelib/templates/",
 				"template": "skin",
 				"responsive": true,
 				"styles": [
-					"skins.bluelib"
+					"skins.bluelib.paper"
 				],
 				"messages": [
 					"sitetitle",
-					"search",
-					"tagline",
-					"navigation-heading"
+					"search"
+				]
+			} ]
+		},
+		"bluelib-royalblue": {
+			"class": "SkinMustache",
+			"args": [ {
+				"name": "Bluelib (Royal Blue)",
+				"templateDirectory": "skins/Bluelib/templates/",
+				"template": "skin",
+				"responsive": true,
+				"styles": [
+					"skins.bluelib.royalblue"
 				],
-				"scripts": [
-					"skins.bluelib.js"
+				"messages": [
+					"sitetitle",
+					"search"
+				]
+			} ]
+		},
+		"bluelib-sophon": {
+			"class": "SkinMustache",
+			"args": [ {
+				"name": "Bluelib (The Sophonity)",
+				"templateDirectory": "skins/Bluelib/templates/",
+				"template": "skin",
+				"responsive": true,
+				"styles": [
+					"skins.bluelib.sophon"
+				],
+				"messages": [
+					"sitetitle",
+					"search"
+				]
+			} ]
+		},
+		"bluelib-amber": {
+			"class": "SkinMustache",
+			"args": [ {
+				"name": "Bluelib (Gestione Amber)",
+				"templateDirectory": "skins/Bluelib/templates/",
+				"template": "skin",
+				"responsive": true,
+				"styles": [
+					"skins.bluelib.amber"
+				],
+				"messages": [
+					"sitetitle",
+					"search"
+				]
+			} ]
+		},
+		"bluelib-hacker": {
+			"class": "SkinMustache",
+			"args": [ {
+				"name": "Bluelib (Hacker Terminal)",
+				"templateDirectory": "skins/Bluelib/templates/",
+				"template": "skin",
+				"responsive": true,
+				"styles": [
+					"skins.bluelib.hacker"
+				],
+				"messages": [
+					"sitetitle",
+					"search"
 				]
 			} ]
 		}
@@ -39,7 +98,16 @@
 		]
 	},
 	"ResourceModules": {
-		"skins.bluelib": {
+		"skins.bluelib.paper": {
+			"class": "ResourceLoaderSkinModule",
+			"features": {},
+			"styles": {
+				"resources/bluelib/src/targets/skeleton.root.css": {},
+				"resources/bluelib/src/targets/paper.root.css": {},
+				"resources/tweaks.less": {}
+			}
+		},
+		"skins.bluelib.royalblue": {
 			"class": "ResourceLoaderSkinModule",
 			"features": {},
 			"styles": {
@@ -48,8 +116,32 @@
 				"resources/tweaks.less": {}
 			}
 		},
-		"skins.bluelib.js": {
-			"scripts": []
+		"skins.bluelib.sophon": {
+			"class": "ResourceLoaderSkinModule",
+			"features": {},
+			"styles": {
+				"resources/bluelib/src/targets/skeleton.root.css": {},
+				"resources/bluelib/src/targets/sophon.root.css": {},
+				"resources/tweaks.less": {}
+			}
+		},
+		"skins.bluelib.amber": {
+			"class": "ResourceLoaderSkinModule",
+			"features": {},
+			"styles": {
+				"resources/bluelib/src/targets/skeleton.root.css": {},
+				"resources/bluelib/src/targets/amber.root.css": {},
+				"resources/tweaks.less": {}
+			}
+		},
+		"skins.bluelib.hacker": {
+			"class": "ResourceLoaderSkinModule",
+			"features": {},
+			"styles": {
+				"resources/bluelib/src/targets/skeleton.root.css": {},
+				"resources/bluelib/src/targets/hacker.root.css": {},
+				"resources/tweaks.less": {}
+			}
 		}
 	},
 	"ResourceFileModulePaths": {
