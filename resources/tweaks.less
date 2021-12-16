@@ -141,9 +141,28 @@ form[id^="mw"], #page-content form, #editform {
 
     // Make the [edit] tags much smaller
     .mw-editsection {
-        font-size: x-small;
-        margin-left: 4px;
+        font-size: small;
+        margin-left: 8px;
     }
+
+    h1 .mw-editsection,
+    h2 .mw-editsection,
+    h3 .mw-editsection,
+    h4 .mw-editsection,
+    h5 .mw-editsection,
+    h6 .mw-editsection {
+        visibility: hidden;
+    }
+
+    h1:hover .mw-editsection,
+    h2:hover .mw-editsection,
+    h3:hover .mw-editsection,
+    h4:hover .mw-editsection,
+    h5:hover .mw-editsection,
+    h6:hover .mw-editsection {
+        visibility: visible;
+    }
+
 }
 
 // Highlight the current search page tab
