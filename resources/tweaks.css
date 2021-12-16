@@ -6,6 +6,11 @@ form[id^="mw"],
 #editform {
   display: block;
 }
+.layout-threecol-left,
+.layout-threecol-right {
+  width: 100%;
+  max-width: 312px;
+}
 .layout-threecol-left .panel,
 .layout-threecol-right .panel {
   min-width: unset;
