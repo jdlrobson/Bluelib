@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+}
+form[id^="mw"],
+#page-content form,
+#editform {
+  display: block;
+}
+.layout-threecol-left .panel,
+.layout-threecol-right .panel {
+  min-width: unset;
+}
+#wpTextbox1 {
+  font-family: var(--bluelib-code-family) !important;
+  font-weight: var(--bluelib-code-weight) !important;
+  font-style: normal;
+}
+.printfooter {
+  display: none;
+}
+.flexlet {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+}
+.flexlet .flexlet-side {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+}
+.flexlet .flexlet-left {
+  margin-right: auto;
+}
+.flexlet .flexlet-right {
+  margin-left: auto;
+}
+.flexlet li {
+  display: block;
+  margin: 0;
+}
+.new {
+  color: rgb(var(--bluelib-broken-r), var(--bluelib-broken-g), var(--bluelib-broken-b)) !important;
+  text-decoration-style: dotted !important;
+}
+.new * {
+  color: rgb(var(--bluelib-broken-r), var(--bluelib-broken-g), var(--bluelib-broken-b)) !important;
+}
+.autocomment {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7) !important;
+}
+.autocomment * {
+  color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.7) !important;
+}
+#pagehistory .selected {
+  --bluelib-color-r: var(--bluelib-cyan-r);
+  --bluelib-color-g: var(--bluelib-cyan-g);
+  --bluelib-color-b: var(--bluelib-cyan-b);
+  outline: none !important;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125) !important;
+}
+.catlinks {
+  margin: 8px 0;
+  padding: 8px;
+  border-radius: 4px;
+  width: 100%;
+  min-width: 312px;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.030);
+  font-size: small;
+}
+.catlinks:empty {
+  display: none;
+}
+.catlinks b {
+  font-weight: 600;
+}
+.catlinks .mw-normal-catlinks {
+  display: flex;
+  flex-direction: row;
+}
+.catlinks .mw-normal-catlinks a[title="Special:Categories"] {
+  font-weight: 600;
+}
+.catlinks .mw-normal-catlinks ul {
+  display: flex;
+  flex-direction: row;
+  padding: 0;
+  margin: 0 8px;
+  gap: 6px;
+}
+.catlinks .mw-normal-catlinks ul li {
+  display: block;
+  margin: 0;
+}
+#namespaces {
+  font-size: small;
+}
+.editOptions {
+  margin-top: 12px;
+}
+.mw-parser-output h1,
+.mw-parser-output h2,
+.mw-parser-output h3,
+.mw-parser-output h4,
+.mw-parser-output h5,
+.mw-parser-output h6 {
+  text-align: left;
+}
+.mw-parser-output .mw-editsection {
+  font-size: small;
+  margin-left: 8px;
+}
+.mw-parser-output h1 .mw-editsection,
+.mw-parser-output h2 .mw-editsection,
+.mw-parser-output h3 .mw-editsection,
+.mw-parser-output h4 .mw-editsection,
+.mw-parser-output h5 .mw-editsection,
+.mw-parser-output h6 .mw-editsection {
+  visibility: hidden;
+}
+.mw-parser-output h1:hover .mw-editsection,
+.mw-parser-output h2:hover .mw-editsection,
+.mw-parser-output h3:hover .mw-editsection,
+.mw-parser-output h4:hover .mw-editsection,
+.mw-parser-output h5:hover .mw-editsection,
+.mw-parser-output h6:hover .mw-editsection {
+  visibility: visible;
+}
+.search-types .current a {
+  color: rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b));
+  font-weight: 600;
+}
+.diff del,
+.diff ins {
+  color: rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b)) !important;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.030) !important;
+}
+.diff .diff-deletedline {
+  --bluelib-color-r: var(--bluelib-red-r);
+  --bluelib-color-g: var(--bluelib-red-g);
+  --bluelib-color-b: var(--bluelib-red-b);
+}
+.diff .diff-addedline {
+  --bluelib-color-r: var(--bluelib-lime-r);
+  --bluelib-color-g: var(--bluelib-lime-g);
+  --bluelib-color-b: var(--bluelib-lime-b);
+}
+.diff .diff-context {
+  color: rgb(var(--bluelib-blue-r), var(--bluelib-blue-g), var(--bluelib-blue-b)) !important;
+  background-color: transparent !important;
+}
+.toc {
+  display: inline-block !important;
+  border-radius: 4px !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125) !important;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125) !important;
+  padding: 8px !important;
+}
+.tocnumber {
+  font-weight: 300 !important;
+  text-decoration: none !important;
+}
+.toctext {
+  font-weight: 500 !important;
+}
+.toctogglelabel {
+  --bluelib-color-r: var(--bluelib-link-r) !important;
+  --bluelib-color-g: var(--bluelib-link-g) !important;
+  --bluelib-color-b: var(--bluelib-link-b) !important;
+  text-decoration: underline !important;
+}
+.thumb {
+  display: inline-block !important;
+  border-radius: 4px !important;
+  border-width: 2px !important;
+  border-style: solid !important;
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125) !important;
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125) !important;
+  padding: 4px !important;
+}
+.thumbcaption {
+  margin-top: 8px !important;
+  text-align: center !important;
+}
+i[class^="fas"],
+i[class^="fab"],
+i[class^="far"] {
+  font-style: normal !important;
+}
+#mw-searchoptions,
+.mw-search-profile-tabs {
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.030);
+}
+.oo-ui-layout,
+.oo-ui-widget,
+.oo-ui-dropdownWidget-handle {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125) !important;
+}
+.oo-ui-widget {
+  background-color: transparent !important;
+}
+.mw-prefs-buttons,
+.oo-ui-buttonElement-button,
+.thumbborder {
+  border-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.125) !important;
+}
+.oo-ui-dropdownInputWidget,
+.oo-ui-dropdownWidget-handle,
+.mw-prefs-buttons,
+.oo-ui-menuOptionWidget {
+  background-color: rgb(var(--bluelib-background-r), var(--bluelib-background-g), var(--bluelib-background-b)) !important;
+}
+.oo-ui-labelElement-label,
+.oo-ui-buttonElement-button,
+.thumbcaption {
+  color: rgb(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b)) !important;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-enabled > .oo-ui-buttonElement-button,
+.thumbinner {
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.030) !important;
+}
+.oo-ui-buttonElement-framed.oo-ui-widget-disabled > .oo-ui-buttonElement-button {
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.030) !important;
+  opacity: 0.3 !important;
+}
+.mw-rcfilters-ui-filterTagMultiselectWidget.oo-ui-widget-enabled .oo-ui-tagMultiselectWidget-handle,
+.oo-ui-radioInputWidget,
+.mw-changeslist-legend {
+  background-color: rgba(var(--bluelib-color-r), var(--bluelib-color-g), var(--bluelib-color-b), 0.030) !important;
+}
+/*# sourceMappingURL=tweaks.css.map */

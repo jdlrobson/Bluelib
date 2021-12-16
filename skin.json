@@ -104,7 +104,7 @@
 			"styles": {
 				"resources/bluelib/src/targets/skeleton.root.css": {},
 				"resources/bluelib/src/targets/paper.root.css": {},
-				"resources/tweaks.less": {}
+				"resources/tweaks.css": {}
 			}
 		},
 		"skins.bluelib.royalblue": {
@@ -113,7 +113,7 @@
 			"styles": {
 				"resources/bluelib/src/targets/skeleton.root.css": {},
 				"resources/bluelib/src/targets/royalblue.root.css": {},
-				"resources/tweaks.less": {}
+				"resources/tweaks.css": {}
 			}
 		},
 		"skins.bluelib.sophon": {
@@ -122,7 +122,7 @@
 			"styles": {
 				"resources/bluelib/src/targets/skeleton.root.css": {},
 				"resources/bluelib/src/targets/sophon.root.css": {},
-				"resources/tweaks.less": {}
+				"resources/tweaks.css": {}
 			}
 		},
 		"skins.bluelib.amber": {
@@ -131,7 +131,7 @@
 			"styles": {
 				"resources/bluelib/src/targets/skeleton.root.css": {},
 				"resources/bluelib/src/targets/amber.root.css": {},
-				"resources/tweaks.less": {}
+				"resources/tweaks.css": {}
 			}
 		},
 		"skins.bluelib.hacker": {
@@ -140,7 +140,7 @@
 			"styles": {
 				"resources/bluelib/src/targets/skeleton.root.css": {},
 				"resources/bluelib/src/targets/hacker.root.css": {},
-				"resources/tweaks.less": {}
+				"resources/tweaks.css": {}
 			}
 		}
 	},
