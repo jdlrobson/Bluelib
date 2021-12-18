@@ -2,6 +2,9 @@
 
 This [MediaWiki][mediawiki] plugin adds [Bluelib][bluelib]-based skins to a wiki.
 
+[mediawiki]: https://www.mediawiki.org/wiki/MediaWiki
+[bluelib]: https://github.com/Steffo99/bluelib
+
 ## Download
 
 To download this skin, clone this repository as `Bluelib` in the `skins/` directory.
