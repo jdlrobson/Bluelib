@@ -7,7 +7,7 @@ This [MediaWiki][mediawiki] plugin adds [Bluelib][bluelib]-based skins to a wiki
 To download this skin, clone this repository as `Bluelib` in the `skins/` directory.
 
 ```console
-wiki:/var/www/mediawiki/skins$ git clone "https://github.com/RYGhub/mediawiki-skins-Bluelib.git" Bluelib 
+wiki:/var/www/mediawiki/skins$ git clone --recurse-submodules "https://github.com/RYGhub/mediawiki-skins-Bluelib.git" Bluelib 
 ```
 
 ## Installation
