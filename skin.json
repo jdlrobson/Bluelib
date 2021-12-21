@@ -8,14 +8,14 @@
 	"license-name": "AGPL-3.0-or-later",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.36.0"
+		"MediaWiki": ">= 1.37.0"
 	},
 	"ValidSkinNames": {
 		"bluelib-paper": {
 			"class": "SkinMustache",
 			"args": [ {
 				"name": "Bluelib (Sheet of Paper)",
-				"templateDirectory": "skins/Bluelib/templates/",
+				"templateDirectory": "templates/",
 				"template": "skin",
 				"responsive": true,
 				"styles": [
@@ -31,7 +31,7 @@
 			"class": "SkinMustache",
 			"args": [ {
 				"name": "Bluelib (Royal Blue)",
-				"templateDirectory": "skins/Bluelib/templates/",
+				"templateDirectory": "templates/",
 				"template": "skin",
 				"responsive": true,
 				"styles": [
@@ -47,7 +47,7 @@
 			"class": "SkinMustache",
 			"args": [ {
 				"name": "Bluelib (The Sophonity)",
-				"templateDirectory": "skins/Bluelib/templates/",
+				"templateDirectory": "templates/",
 				"template": "skin",
 				"responsive": true,
 				"styles": [
@@ -63,7 +63,7 @@
 			"class": "SkinMustache",
 			"args": [ {
 				"name": "Bluelib (Gestione Amber)",
-				"templateDirectory": "skins/Bluelib/templates/",
+				"templateDirectory": "templates/",
 				"template": "skin",
 				"responsive": true,
 				"styles": [
@@ -79,7 +79,7 @@
 			"class": "SkinMustache",
 			"args": [ {
 				"name": "Bluelib (Hacker Terminal)",
-				"templateDirectory": "skins/Bluelib/templates/",
+				"templateDirectory": "templates/",
 				"template": "skin",
 				"responsive": true,
 				"styles": [
